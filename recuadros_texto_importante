@@ -1,0 +1,54 @@
+/*Añadir este código antes del cierre ]]></b:skin>*/
+
+#caja {
+width: 400px; /*ANCHO TOTAL DE LA CAJA*/
+color: #990000; /*COLOR DEL TEXTO*/
+text-align:center;
+margin:0px auto;
+}
+
+.redondeado {
+height: 1px;
+overflow: hidden;
+background-color: #cccccc; /* COLOR DE LA CAJA */
+}
+
+/* LAS LINEAS PARA FORMAR LA PARTE REDONDEADA */
+.r1 { margin: 0 12px;}
+.r2 { margin: 0 9px;}
+.r3 { margin: 0 7px;}
+.r4 { margin: 0 6px;}
+.r5 { margin: 0 5px;}
+.r6 { margin: 0 4px;}
+.r7 { margin: 0 3px;}
+.r8 { margin: 0 2px; height: 2px;}
+.r9 { margin: 0 1px; height: 3px; }
+
+.contenido {
+height: auto;
+padding: 0 15px;
+}
+
+/*Lo usaremos metiendo este código en el cuerpo de la entrada editando el HTML*/
+
+<div id="caja">
+<div class="redondeado r1"></div>
+<div class="redondeado r2"></div>
+<div class="redondeado r3"></div>
+<div class="redondeado r4"></div>
+<div class="redondeado r5"></div>
+<div class="redondeado r6"></div>
+<div class="redondeado r7"></div>
+<div class="redondeado r8"></div>
+<div class="redondeado r9"></div>
+<div class="redondeado contenido">Este es un texto encerrado en una caja con esquinas redondas. No importa el tamaño del texto, porque la parte central conserva las dimensiones necesarias.</div>
+<div class="redondeado r9"></div>
+<div class="redondeado r8"></div>
+<div class="redondeado r7"></div>
+<div class="redondeado r6"></div>
+<div class="redondeado r5"></div>
+<div class="redondeado r4"></div>
+<div class="redondeado r3"></div>
+<div class="redondeado r2"></div>
+<div class="redondeado r1"></div>
+</div>
