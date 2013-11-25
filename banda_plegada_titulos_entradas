@@ -1,0 +1,49 @@
+/*Antes del cierre de ]]></b:skin> pegar este código, es el que dibuja el rectángulo*/
+
+-title {
+position:relative;
+display:block;
+overflow:hidden;
+width: 85%;
+height: 2em;
+margin: 5px 0 0 -28px; 
+padding:2px 4px 4px 40px;
+background: #333;
+border: 1px solid #555;
+border-radius:10px 10px 0 0;
+line-height:1.10em;
+}
+
+/*Este también, es el que dibuja el triángulo para hacer el efecto del pliegue*/
+.trih3 {display: block;
+z-index: -1;
+height: 0px;
+width: 0px;
+margin: -12px 0 0 -40px;
+border: 12px solid transparent;
+border-right: 12px solid #222;
+}
+
+/*Ahora añadimos la sentencia <div class='trih3'/> en un código similar al siguiente*/
+
+<b:includable id='post' var='post'>
+<div class='post hentry'>
+<a expr:name='data:post.id'/>
+<b:if cond='data:post.title'>
+<h3 class='post-title entry-title'>
+<b:if cond='data:post.link'>
+<a expr:href='data:post.link'><data:post.title/></a>
+<b:else/>
+<b:if cond='data:post.url'>
+<b:if cond='data:blog.url != data:post.url'>
+<a expr:href='data:post.url'><data:post.title/></a>
+<b:else/>
+<data:post.title/>
+</b:if>
+<b:else/>
+<data:post.title/>
+</b:if>
+</b:if>
+</h3>
+<div class='trih3'/>  /*<--- Esta es la nueva línea.*/
+</b:if>
